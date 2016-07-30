@@ -7,10 +7,10 @@ MagicTab is a PagerTabStrip.
 
 ## Demo
 ### MODE_NORMAL:
-![MODE_NORMAL](http://i1.piimg.com/565445/454ffd392c2b0171.gif)
+![MODE_NORMAL](https://github.com/lybeat/MagicTab/blob/master/screenshot/magic_tab_normal.gif?raw=true)
 
 ### MODE_BLANK:
-![MODE_BLANK](http://i1.piimg.com/565445/0daac5a59b9cade6.gif)
+![MODE_BLANK](https://github.com/lybeat/MagicTab/blob/master/screenshot/magic_tab_blank.gif?raw=true)
 
 ## Gradle Dependency
     compile 'com.lybeat:magic-tab:1.0.0'
