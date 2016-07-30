@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.lybeat.chushoutv.R;
 import com.lybeat.chushoutv.adapter.TabAdapter;
@@ -55,15 +58,15 @@ public class MainActivity extends AppCompatActivity {
         TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager(), fragments, titles, noneIcons, pressedIcons);
         viewPager.setAdapter(tabAdapter);
         magicTab.setViewPager(viewPager);
-//        magicTab.setMode(MagicTab.MODE_BLANK);
-//        magicTab.setBlankIndex(2);
+        magicTab.setMode(MagicTab.MODE_BLANK);
+        magicTab.setBlankIndex(2);
 
-//        ImageView blankImg = (ImageView) findViewById(R.id.tab_blank_img);
-//        blankImg.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(MainActivity.this, "Hi, I'am not magic tab", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        ImageView blankImg = (ImageView) findViewById(R.id.tab_blank_img);
+        blankImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Hi, I'am not magic tab", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

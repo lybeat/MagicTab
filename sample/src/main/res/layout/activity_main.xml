@@ -26,11 +26,11 @@
         android:layout_marginTop="48dp"
         android:layout_above="@id/pager_tab_strip"/>
 
-    <!--<ImageView-->
-        <!--android:id="@+id/tab_blank_img"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:src="@drawable/tab_blank_selector"/>-->
+    <ImageView
+        android:id="@+id/tab_blank_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/tab_blank_selector"/>
 </RelativeLayout>

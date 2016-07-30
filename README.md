@@ -6,7 +6,11 @@ MagicTab is a PagerTabStrip.
 2. Support custom MagicTab background and the tab's text color and size.
 
 ## Demo
-![MODE_NORMAL](http://i1.piimg.com/565445/0daac5a59b9cade6.gif)
+### MODE_NORMAL:
+![MODE_NORMAL](http://i1.piimg.com/565445/454ffd392c2b0171.gif)
+
+### MODE_BLANK:
+![MODE_BLANK](http://i1.piimg.com/565445/0daac5a59b9cade6.gif)
 
 ## Gradle Dependency
     compile 'com.lybeat:magic-tab:1.0.0'
