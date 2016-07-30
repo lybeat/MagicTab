@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PagerTabStrip">
+        <attr name="ptsPadding" format="dimension" />
+        <attr name="ptsTextSize" format="dimension" />
+        <attr name="ptsTextColorNormal" format="color|reference" />
+        <attr name="ptsTextColorPressed" format="color|reference" />
+        <attr name="ptsBackground" format="color|reference" />
+    </declare-styleable>
+
+</resources>
