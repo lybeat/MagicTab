@@ -37,7 +37,7 @@ ext {
     siteUrl = 'https://github.com/lybeat/MagicTab'
     gitUrl = 'https://github.com/lybeat/MagicTab.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.1.1'
 
     developerId = 'lybeat'
     developerName = 'lybeat'

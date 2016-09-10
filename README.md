@@ -13,7 +13,7 @@ MagicTab is a PagerTabStrip.
 ![MODE_BLANK](https://github.com/lybeat/MagicTab/blob/master/screenshot/magic_tab_blank.gif?raw=true)
 
 ## Gradle Dependency
-    compile 'com.lybeat:magic-tab:1.0.0'
+    compile 'com.lybeat:magic-tab:1.1.1'
 
 ## Usage
 * ### STEP1:
@@ -32,7 +32,15 @@ MagicTab is a PagerTabStrip.
         lybeat:ptsTextSize="12sp"/>
     ```
 * ### STEP2:
-    Define TabAdapter and implements MagicTab.IconTabProvider
+    Create tabs. Tab is provided MagicTab.
+
+    ```Java
+    List<Tab> tabs = new ArrayList<>();
+    tabs.add(new Tab(new HomeFragment(), "首页", R.drawable.tab_icon_homemain_n, R.drawable.tab_icon_homemain_p));
+    tabs.add(new Tab(new FollowFragment(), "关注", R.drawable.tab_icon_subcribe_n, R.drawable.tab_icon_subcribe_p));
+    tabs.add(new Tab(new ZoneFragment(), "专区", R.drawable.tab_icon_zone_n, R.drawable.tab_icon_zone_p));
+    tabs.add(new Tab(new MineFragment(), "我的", R.drawable.tab_icon_mine_n, R.drawable.tab_icon_mine_p));
+    ```
 
 * ### STEP3:
     Associate TabAdapter, ViewPager and MagicTab

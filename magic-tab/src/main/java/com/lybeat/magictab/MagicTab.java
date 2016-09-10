@@ -23,12 +23,6 @@ public class MagicTab extends FrameLayout {
 
     private static final String TAG = "PagerTabStrip";
 
-    public interface IconTabProvider {
-        int getPageNoneIconResId(int position);
-
-        int getPagePressedIconResId(int position);
-    }
-
     public static final int MODE_NORMAL = 0;
     public static final int MODE_BLANK = 1;
 
@@ -115,10 +109,10 @@ public class MagicTab extends FrameLayout {
         for (int i = 0; i < tabCount; i++) {
             if (i == currentPosition) {
                 addTab(i, (String) viewPager.getAdapter().getPageTitle(i), tabTextColorPressed,
-                        ((IconTabProvider) viewPager.getAdapter()).getPagePressedIconResId(i));
+                        ((TabIcon) viewPager.getAdapter()).getPagePressedIconId(i));
             } else {
                 addTab(i, (String) viewPager.getAdapter().getPageTitle(i), tabTextColorNormal,
-                        ((IconTabProvider) viewPager.getAdapter()).getPageNoneIconResId(i));
+                        ((TabIcon) viewPager.getAdapter()).getPageNormalIconId(i));
             }
         }
     }
@@ -130,18 +124,18 @@ public class MagicTab extends FrameLayout {
             } else if (i < blankIndex) {
                 if (i == currentPosition) {
                     addTab(i, (String) viewPager.getAdapter().getPageTitle(i), tabTextColorPressed,
-                            ((IconTabProvider) viewPager.getAdapter()).getPagePressedIconResId(i));
+                            ((TabIcon) viewPager.getAdapter()).getPagePressedIconId(i));
                 } else {
                     addTab(i, (String) viewPager.getAdapter().getPageTitle(i), tabTextColorNormal,
-                            ((IconTabProvider) viewPager.getAdapter()).getPageNoneIconResId(i));
+                            ((TabIcon) viewPager.getAdapter()).getPageNormalIconId(i));
                 }
             } else {
                 if (i == currentPosition + 1) {
                     addTab(i, (String) viewPager.getAdapter().getPageTitle(i - 1), tabTextColorPressed,
-                            ((IconTabProvider) viewPager.getAdapter()).getPagePressedIconResId(i - 1));
+                            ((TabIcon) viewPager.getAdapter()).getPagePressedIconId(i - 1));
                 } else {
                     addTab(i, (String) viewPager.getAdapter().getPageTitle(i - 1), tabTextColorNormal,
-                            ((IconTabProvider) viewPager.getAdapter()).getPageNoneIconResId(i - 1));
+                            ((TabIcon) viewPager.getAdapter()).getPageNormalIconId(i - 1));
                 }
             }
         }

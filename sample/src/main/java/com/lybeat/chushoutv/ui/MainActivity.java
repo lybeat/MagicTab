@@ -1,7 +1,6 @@
 package com.lybeat.chushoutv.ui;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,8 +8,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.lybeat.chushoutv.R;
-import com.lybeat.chushoutv.adapter.TabAdapter;
 import com.lybeat.magictab.MagicTab;
+import com.lybeat.magictab.Tab;
+import com.lybeat.magictab.TabAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,35 +27,13 @@ public class MainActivity extends AppCompatActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.main_pager);
         MagicTab magicTab = (MagicTab) findViewById(R.id.pager_tab_strip);
 
-        HomeFragment homeFragment = new HomeFragment();
-        FollowFragment followFragment = new FollowFragment();
-        ZoneFragment zoneFragment = new ZoneFragment();
-        MineFragment mineFragment = new MineFragment();
-        List<Fragment> fragments = new ArrayList<>();
-        fragments.add(homeFragment);
-        fragments.add(followFragment);
-        fragments.add(zoneFragment);
-        fragments.add(mineFragment);
+        List<Tab> tabs = new ArrayList<>();
+        tabs.add(new Tab(new HomeFragment(), "首页", R.drawable.tab_icon_homemain_n, R.drawable.tab_icon_homemain_p));
+        tabs.add(new Tab(new FollowFragment(), "关注", R.drawable.tab_icon_subcribe_n, R.drawable.tab_icon_subcribe_p));
+        tabs.add(new Tab(new ZoneFragment(), "专区", R.drawable.tab_icon_zone_n, R.drawable.tab_icon_zone_p));
+        tabs.add(new Tab(new MineFragment(), "我的", R.drawable.tab_icon_mine_n, R.drawable.tab_icon_mine_p));
 
-        List<String> titles = new ArrayList<>();
-        titles.add("首页");
-        titles.add("关注");
-        titles.add("专区");
-        titles.add("我的");
-
-        List<Integer> noneIcons = new ArrayList<>();
-        noneIcons.add(R.drawable.tab_icon_homemain_n);
-        noneIcons.add(R.drawable.tab_icon_subcribe_n);
-        noneIcons.add(R.drawable.tab_icon_zone_n);
-        noneIcons.add(R.drawable.tab_icon_mine_n);
-
-        List<Integer> pressedIcons = new ArrayList<>();
-        pressedIcons.add(R.drawable.tab_icon_homemain_p);
-        pressedIcons.add(R.drawable.tab_icon_subcribe_p);
-        pressedIcons.add(R.drawable.tab_icon_zone_p);
-        pressedIcons.add(R.drawable.tab_icon_mine_p);
-
-        TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager(), fragments, titles, noneIcons, pressedIcons);
+        TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager(), tabs);
         viewPager.setAdapter(tabAdapter);
         magicTab.setViewPager(viewPager);
         magicTab.setMode(MagicTab.MODE_BLANK);
