@@ -32,7 +32,7 @@ MagicTab is a PagerTabStrip.
         lybeat:ptsTextSize="12sp"/>
     ```
 * ### STEP2:
-    Create tabs. Tab is provided MagicTab.
+    Create tabs. Tab is provided by MagicTab.
 
     ```Java
     List<Tab> tabs = new ArrayList<>();
